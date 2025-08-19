@@ -173,9 +173,13 @@ export default function Home() {
                                 className="text-regular-semibold">
                                 Number of People
                             </label>
-                            <span id="numOfPeopleErrorText" className="d-none">
-                                Can&apos;t be zero
-                            </span>
+                            {error && (
+                                <span
+                                    id="numOfPeopleErrorText"
+                                    className="error">
+                                    Can&apos;t be zero
+                                </span>
+                            )}
                         </div>
                         <div className="icon-input_wrapper">
                             <svg
