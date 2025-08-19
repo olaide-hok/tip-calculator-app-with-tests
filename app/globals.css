@@ -180,7 +180,7 @@ input[type='number']::-webkit-inner-spin-button {
 .container .calculator .tip-result button.resetBtn {
     border-style: none;
     border-radius: 5px;
-    background: #0d686d;
+    background: #26c2ae;
     width: 100%;
     text-transform: uppercase;
     padding: 0.5625rem 0;
