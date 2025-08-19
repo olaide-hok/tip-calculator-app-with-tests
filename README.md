@@ -25,20 +25,16 @@ Users should be able to:
 
 ### Screenshot
 
-```html
 <table>
  <tr>
     <th>Desktop</th>
-    <th>Tablet</th>
     <th>Mobile</th>
   </tr>
   <tr>
-    <td><img src="./entertainment-web-app-desktop.png" alt="Desktop version"></td>
-    <td><img src="./entertainment-web-app-tablet.png" alt="Tablet version"></td>
-    <td><img src="./entertainment-web-app-mobile.png" alt="Mobile version"></td>
+    <td><img src="./tip-caclculator-app-desktop.png" alt="Desktop version"></td>
+    <td><img src="./tip-caclculator-app-mobile.png" alt="Mobile version"></td>
   </tr>
 </table>
-```
 
 ### Links
 
