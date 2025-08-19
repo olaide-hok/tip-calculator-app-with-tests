@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Link](https://your-solution-url.com)
--   Live Site URL: [Link](https://your-live-site-url.com)
+-   Solution URL: [Link](https://github.com/olaide-hok/tip-calculator-app-with-tests)
+-   Live Site URL: [Link](https://tip-calculator-app-with-unit-tests.netlify.app/)
 
 ## My process
 
@@ -52,12 +52,13 @@ Users should be able to:
 -   Mobile-first workflow
 -   [React](https://reactjs.org/) - JS library
 -   [Next.js](https://nextjs.org/) - React framework
--   [Tailwind CSS](https://tailwindcss.com/) - For styles
 
 ### Useful resources
 
 -   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 -   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - The React Testing Library is a very light-weight solution for testing React components.
+-   [Vitest](https://vitest.dev/guide/) - A testing framework powered by Vite.
 
 ## Author
 
