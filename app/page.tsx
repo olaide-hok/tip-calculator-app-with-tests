@@ -1,59 +1,10 @@
 'use client';
 
+import Results from '@/components/Results';
+import TipButtons from '@/components/TipButtons';
 import {calculateTipPerPerson, calculateTotalPerPerson} from '@/utils';
 import Image from 'next/image';
 import {useState} from 'react';
-
-type TipButtonsProps = {
-    handleTipCalculation: (tip: number) => void;
-};
-
-export function TipButtons({handleTipCalculation}: TipButtonsProps) {
-    return (
-        <>
-            {[5, 10, 15, 25, 50].map((tip) => (
-                <button
-                    type="button"
-                    className="btn"
-                    key={tip}
-                    onClick={() => handleTipCalculation(tip)}>
-                    {tip}%
-                </button>
-            ))}
-        </>
-    );
-}
-
-type ResultsProps = {
-    tipAmountPerPerson: string;
-    totalPerPerson: string;
-};
-
-export function Results({tipAmountPerPerson, totalPerPerson}: ResultsProps) {
-    return (
-        <div className="wrapper">
-            <div className="tip_amount">
-                <p>
-                    Tip Amount
-                    <br />
-                    <span> / person </span>
-                </p>
-                <span className="value" id="tipAmountPerPerson">
-                    {tipAmountPerPerson}
-                </span>
-            </div>
-            <div className="total">
-                <p>
-                    Total <br />
-                    <span> / person </span>
-                </p>
-                <span className="value" id="totalPerPerson">
-                    {totalPerPerson}
-                </span>
-            </div>
-        </div>
-    );
-}
 
 export default function Home() {
     const [bill, setBill] = useState<number | ''>('');
