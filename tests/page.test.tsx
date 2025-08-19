@@ -1,7 +1,9 @@
 import {expect, describe, it, vi} from 'vitest';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Home, {Results, TipButtons} from '../app/page';
+import Home from '../app/page';
+import Results from '@/components/Results';
+import TipButtons from '@/components/TipButtons';
 
 describe('Home', () => {
     it('renders Home component', () => {
