@@ -100,8 +100,8 @@ export default function Home() {
                 <Image
                     src="/logo.svg"
                     alt="spliter-logo"
-                    width={32}
-                    height={32}
+                    width={87}
+                    height={53}
                 />
             </div>
             <div className="calculator">
