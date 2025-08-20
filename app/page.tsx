@@ -13,6 +13,7 @@ export default function Home() {
     const [tipAmountPerPerson, setTipAmountPerPerson] = useState('0.00');
     const [totalPerPerson, setTotalPerPerson] = useState('0.00');
     const [error, setError] = useState(false);
+    const [selectedTip, setSelectedTip] = useState<number | null>(null);
 
     const handleTipCalculation = (tipPercentage: number) => {
         if (!numOfPeople || numOfPeople <= 0) {
@@ -34,6 +35,8 @@ export default function Home() {
                 Number(numOfPeople)
             )
         );
+        setSelectedTip(tipPercentage);
+        setCustomTip('');
     };
 
     const handleReset = () => {
@@ -43,6 +46,7 @@ export default function Home() {
         setTipAmountPerPerson('0.00');
         setTotalPerPerson('0.00');
         setError(false);
+        setSelectedTip(null);
     };
 
     return (
@@ -69,8 +73,8 @@ export default function Home() {
                                 viewBox="0 0 11 17"
                                 fill="none">
                                 <path
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
                                     d="M6.01586 16.328V14.864C7.24786 14.784 8.23586 14.42 8.97986 13.772C9.72386 13.124 10.0959 12.264 10.0959 11.192V11.048C10.0959 10.056 9.74786 9.276 9.05186 8.708C8.35586 8.14 7.34386 7.776 6.01586 7.616V4.184C6.57586 4.328 7.02786 4.584 7.37186 4.952C7.71586 5.32 7.88786 5.768 7.88786 6.296V6.584H9.71186V6.152C9.71186 5.704 9.62386 5.276 9.44786 4.868C9.27186 4.46 9.02386 4.088 8.70386 3.752C8.38386 3.416 7.99586 3.132 7.53986 2.9C7.08386 2.668 6.57586 2.504 6.01586 2.408V0.872002H4.28786V2.36C3.79186 2.408 3.31986 2.516 2.87186 2.684C2.42386 2.852 2.03186 3.076 1.69586 3.356C1.35986 3.636 1.09186 3.972 0.891859 4.364C0.691859 4.756 0.591859 5.208 0.591859 5.72V5.864C0.591859 6.824 0.907859 7.572 1.53986 8.108C2.17186 8.644 3.08786 8.992 4.28786 9.152V13.064C3.58386 12.904 3.03986 12.592 2.65586 12.128C2.27186 11.664 2.07986 11.048 2.07986 10.28V9.992H0.255859V10.568C0.255859 11.032 0.335859 11.492 0.495859 11.948C0.655859 12.404 0.899859 12.828 1.22786 13.22C1.55586 13.612 1.97186 13.948 2.47586 14.228C2.97986 14.508 3.58386 14.704 4.28786 14.816V16.328H6.01586ZM4.28786 7.424C3.59986 7.296 3.12386 7.092 2.85986 6.812C2.59586 6.532 2.46386 6.168 2.46386 5.72C2.46386 5.256 2.63986 4.888 2.99186 4.616C3.34386 4.344 3.77586 4.168 4.28786 4.088V7.424ZM6.01586 9.344V13.136C6.70386 13.056 7.24386 12.848 7.63586 12.512C8.02786 12.176 8.22386 11.736 8.22386 11.192C8.22386 10.632 8.04786 10.216 7.69586 9.944C7.34386 9.672 6.78386 9.472 6.01586 9.344Z"
                                     fill="#9EBBBD"
                                 />
@@ -95,25 +99,9 @@ export default function Home() {
                         <div className="btn-wrapper">
                             <TipButtons
                                 handleTipCalculation={handleTipCalculation}
-                            />
-
-                            <input
-                                id="customTip"
-                                type="number"
-                                placeholder="Custom"
-                                value={customTip}
-                                onChange={(e) =>
-                                    setCustomTip(
-                                        e.target.value
-                                            ? Number(e.target.value)
-                                            : ''
-                                    )
-                                }
-                                onKeyDown={(e) => {
-                                    if (e.key === 'Enter' && customTip) {
-                                        handleTipCalculation(Number(customTip));
-                                    }
-                                }}
+                                selectedTip={selectedTip}
+                                customTip={customTip}
+                                setCustomTip={setCustomTip}
                             />
                         </div>
                     </div>
