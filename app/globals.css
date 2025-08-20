@@ -38,7 +38,7 @@ input[type='number'] {
     font-weight: 700;
 }
 input[type='number']:hover {
-    border: 2px solid #26c2ae;
+    outline: 2px solid #26c2ae;
     background: #f3f9fa;
     cursor: pointer;
 }
@@ -105,13 +105,13 @@ input[type='number']::-webkit-inner-spin-button {
     color: #00474b;
     background: #26c2ae;
 }
-.container .calculator .inputs .select-tip .btn-wrapper button:hover,
-.container .calculator .inputs .select-tip .btn-wrapper button:focus,
-.container .calculator .inputs .select-tip .btn-wrapper button:active {
+
+.container .calculator .inputs .select-tip .btn-wrapper button.btn-active {
     background: #9fe8df;
     color: #00474b;
     cursor: pointer;
 }
+
 .container .calculator .inputs .numOfPeople .labelAndErrorText_wrapper {
     display: flex;
     justify-content: space-between;
